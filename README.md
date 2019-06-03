@@ -70,7 +70,8 @@ Some default commands are provided within Citation for aiding the developer.
 
 #### Help SubCommand
 
-- A default help sub command is provided within Citation. You need not to register the help sub command yourself.
+- A default help sub command is provided within Citation.
+- Register the sub command to get a pre-set help command which automatically generates help pages for your commands.
 
 ```php
     $help = new JackMD\Citation\Command\Defaults\HelpSubCommand(BaseCommand $command, string $headerName, string $permission, string $usage, array $aliases = []);
