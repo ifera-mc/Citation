@@ -15,6 +15,8 @@ First of all you need to make a variable (save it somewhere since you might need
 
 ## Commands
 
+Citation provides a neat and easy to use API for developers for registering commands.
+
 ### Class
 
 - Your command class must extend `JackMD\Citation\Command\BaseCommand` class in order for it to be registered.
@@ -82,5 +84,5 @@ Some default commands are provided within Citation for aiding the developer.
 
 - Hopefully I mentioned every required detail.
 - For any feature additions or bug reports to open an issue.
-= PRs are always welcomed.
+- PRs are always welcomed.
 
