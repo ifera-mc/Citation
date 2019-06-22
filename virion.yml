@@ -1,6 +1,6 @@
 name: Citation
 version: 1.0.0
 api: [3.0.0]
-antigen: JackMD\Citation\Citation
+antigen: JackMD\Citation
 author: JackMD
 php: [7.2]
