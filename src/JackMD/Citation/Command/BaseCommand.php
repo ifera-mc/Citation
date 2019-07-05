@@ -128,6 +128,16 @@ abstract class BaseCommand extends Command{
 	}
 
 	/**
+	 * @param array $args
+	 * @return bool
+	 */
+	public function subCommandExists(array $args): bool{
+		$subCommand = strtolower(array_shift($args));
+
+		return isset($this->subCommands[$subCommand]) || isset($this->aliasSubCommands[$subCommand]);
+	}
+
+	/**
 	 * @param CommandSender $sender
 	 * @param array         $args
 	 */
