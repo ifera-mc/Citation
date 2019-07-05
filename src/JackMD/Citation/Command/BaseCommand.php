@@ -88,14 +88,15 @@ abstract class BaseCommand extends Command{
 	/**
 	 * @param CommandSender $sender
 	 * @param string        $permission
+	 * @param string|null   $customError
 	 * @return bool
 	 */
-	public final function hasPermission(CommandSender $sender, string $permission): bool{
+	public final function hasPermission(CommandSender $sender, string $permission, ?string $customError = null): bool{
 		if($sender->hasPermission($permission)){
 			return true;
 		}
 
-		$this->sendError($sender, "You don't have permission to use this command.");
+		$this->sendError($sender, $customError ?? "You don't have permission to use this command.");
 
 		return false;
 	}
