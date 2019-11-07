@@ -133,6 +133,10 @@ abstract class BaseCommand extends Command{
 	 * @return bool
 	 */
 	public function subCommandExists(array $args): bool{
+		if(empty($args)){
+			return false;
+		}
+
 		$subCommand = strtolower(array_shift($args));
 
 		return isset($this->subCommands[$subCommand]) || isset($this->aliasSubCommands[$subCommand]);
@@ -143,6 +147,10 @@ abstract class BaseCommand extends Command{
 	 * @param array         $args
 	 */
 	public function executeSubCommand(CommandSender $sender, array $args): void{
+		if(empty($args)){
+			return;
+		}
+
 		$subCommand = strtolower(array_shift($args));
 
 		if(isset($this->subCommands[$subCommand])){
